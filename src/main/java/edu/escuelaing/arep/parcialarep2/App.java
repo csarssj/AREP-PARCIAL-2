@@ -2,8 +2,10 @@ package edu.escuelaing.arep.parcialarep2;
 import static spark.Spark.*;
 import static spark.Spark.get;
 import static spark.Spark.port;
-import static spark.Spark.post;
 /**
+ * Calculadora de funciones desplegada en EC2 
+ * 
+ * 
  * Ceseg
  *
  */
@@ -35,9 +37,7 @@ public class App
     private static String resultExp(spark.Request req, spark.Response res) {
     	String param = req.queryParams("value");
     	Double ans = Math.exp(new Double(param));
-    	System.out.println(param);
     	String pageContent = "{operation: ln, input: "+param+", output: "+ans+"}";
-    	//System.out.print(pageContent);
         return pageContent;
     }
     /**
@@ -48,11 +48,8 @@ public class App
      */
     private static String resultLn(spark.Request req, spark.Response res) {
     	String param = req.queryParams("value");
-    	System.out.println(param);
     	Double ans = Math.log(new Double(param));
-    	System.out.println(param);
     	String pageContent = "{operation: ln, input: "+param+", output: "+ans+"}";
-    	//System.out.print(pageContent);
         return pageContent;
     }
 }

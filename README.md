@@ -1,4 +1,4 @@
-# TALLER DE MODULARIZACIÓN CON VIRTUALIZACION E INTRODUCCION A DOCKER Y AWS 
+# AREP-PARCIAL-2
 
 ## Manual de usuario
 
@@ -27,7 +27,7 @@ mvn javadoc:javadoc
 Ejecutando el siquiente comando en la consola y accediendo al siguiente link se puede visualizar una prueba.
 
 ```
-java -cp target/classes;target/dependency/* edu.escuelaing.arep.parcialarep2
+java -cp target/classes;target/dependency/* edu.escuelaing.arep.parcialarep2.App
 
 
 ```
@@ -61,6 +61,51 @@ Se prueba localmente las dos funciones con las siguientes url:
 ![image](https://github.com/csarssj/AREP-PARCIAL-2/blob/main/img/local.png)
 
 
+
+Construir la imagen con el siguiente comando:
+
+```
+  docker build --tag parcial2 .
+  
+```
+
+
+Se crean la instancia con el siguiente comando:
+```
+docker run -d -p 8000:6000 --name firstdockercontainer parcial2
+
+```
+
+Y como se ve se creo y funciona:
+
+
+Ahora se realizan los siguientes comandos, para el despliegue en dockerhub;
+
+```
+docker tag parcial2 csarssj/arep-parcial-2
+
+docker push csarssj/arep-parcial-2:lastest}
+
+```
+
+Se crea la instancia en AWS y del contentedor 
+
+```
+docker run -d -p 42000:6000 --name firstdockercontainer csarssj/arep-parcial-2
+```
+y finalmente se evidencian las dos funciones:
+
+![image](https://github.com/csarssj/AREP-PARCIAL-2/blob/main/img/aws.png)
+
+## Video de la solucion en este link
+
+* https://github.com/csarssj/AREP-PARCIAL-2/blob/main/videosolucion.mp4
+
+### NOTA: Me toco desinstalar docker del computador porque se me presento un error preciso en el parcial y toco volver a instalarlo
+
+![image](https://github.com/csarssj/AREP-PARCIAL-2/blob/main/img/error_docker.png)
+
+![image](https://github.com/csarssj/AREP-PARCIAL-2/blob/main/img/error_docker2.png)
 
 ## Construido en
 
