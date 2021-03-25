@@ -95,7 +95,7 @@ docker run -d -p 42000:6000 --name firstdockercontainer csarssj/arep-parcial-2
 ```
 y finalmente se evidencian las dos funciones:
 
-![image](https://github.com/csarssj/AREP-PARCIAL-2/blob/main/img/aws.png)
+![image](https://github.com/csarssj/AREP-PARCIAL-2/blob/main/img/aws.jpg)
 
 ## Video de la solucion en este link
 
@@ -103,9 +103,9 @@ y finalmente se evidencian las dos funciones:
 
 ### NOTA: Me toco desinstalar docker del computador porque se me presento un error preciso en el parcial y toco volver a instalarlo
 
-![image](https://github.com/csarssj/AREP-PARCIAL-2/blob/main/img/error_docker.png)
+![image](https://github.com/csarssj/AREP-PARCIAL-2/blob/main/img/error%20docker.jpg)
 
-![image](https://github.com/csarssj/AREP-PARCIAL-2/blob/main/img/error_docker2.png)
+![image](https://github.com/csarssj/AREP-PARCIAL-2/blob/main/img/error%20docker2.jpg)
 
 ## Construido en
 
